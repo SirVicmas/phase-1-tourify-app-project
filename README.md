@@ -69,7 +69,7 @@ When a user clicks the "Like" button for an attraction, the likes count is incre
    });
 
 
-Leaving Reviews: Users can type a review in the review input field and click the "Add Review" button to leave a review for an attraction. The updateReviewList function adds the new review to the review list.
+Leaving Reviews: When a user adds a review or asks a question, the app updates the local data, sends a PATCH request to the server to update the attraction data, and saves the updated data to localStorage
 
 Asking Inquiries: Users can ask questions about attractions by typing a question in the inquiry input field and clicking the "Ask" button. The updateInquiryList function adds the new inquiry to the inquiry list.
 

@@ -81,15 +81,46 @@ document.addEventListener("DOMContentLoaded", () => {
         reviewSection.appendChild(reviewInput);
   
         const addReviewButton = document.createElement("button");
-        addReviewButton.textContent = "Add Review";
-        addReviewButton.addEventListener("click", () => {
+        addReviewButton.textContent = "Add Review"; 
+        addReviewButton.addEventListener("click", async () => {
           const reviewText = reviewInput.value.trim();
           if (reviewText !== "") {
             attraction.reviews.push(reviewText);
             updateReviewList(reviewList, reviewText);
             reviewInput.value = "";
+        
+            // Update reviews on the server
+            try {
+              await updateAttractionReviews(attraction.id, { reviews: attraction.reviews });
+              console.log("Reviews updated successfully");
+            } catch (error) {
+              console.error("Error updating reviews:", error);
+            }
+        
+            // Save updated data to localStorage
+            saveAttractions(attractions);
           }
-        });
+
+          // Function to update the reviews on the server using PATCH request
+          async function updateAttractionReviews(attractionId, reviews) {
+            try {
+              const response = await fetch(`https://tourify-web-app.onrender.com/attractions/${attractionId}`, {
+                method: "PATCH",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(reviews),
+              });
+
+              if (!response.ok) {
+                throw new Error(`Failed to update reviews for attraction ${attractionId}`);
+              }
+            } catch (error) {
+              throw error;
+            }
+          }
+
+                  });
         reviewSection.appendChild(addReviewButton);
   
         // Inquiry Section
@@ -146,8 +177,10 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify(likes),
     });
     }
+
+
         // Function to save attractions data to localStorage
-    function saveAttractions(attractions) {
+        function saveAttractions(attractions) {
         localStorage.setItem("attractions", JSON.stringify(attractions));
     }
     }
@@ -172,3 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
       likesCount.textContent = likes + " Likes";
     }
   });
+
+
+ 
