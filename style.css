@@ -115,6 +115,10 @@ header a:hover {
 }
 
 /* Like button styles */
+
+.card span {
+    color: #ccc;
+}
 .like-button {
     display: inline-block;
     margin-right: 5px;
@@ -219,6 +223,7 @@ li {
 
 .inquiry-button:hover {
   background-color: #0056b3;
+}
 
 /* Scroll to top button styles */
 #scroll-to-top {

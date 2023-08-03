@@ -1,8 +1,7 @@
-// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
     const attractionGallery = document.getElementById("attraction-gallery");
   
-    // Fetch attraction data from the JSON server
+    // Fetch attraction data from the local JSON DB server
     fetch("https://tourify-web-app.onrender.com/attractions")
       .then(response => response.json())
       .then(data => {
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
           attraction.inquiries = attraction.inquiries || [];
         });
   
-        // Create attraction cards
         createAttractionCard(attractions);
       })
       .catch(error => alert(error));
@@ -46,12 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const likeButton = document.createElement("button");
         likeButton.textContent = "Like";
         likeButton.addEventListener("click", () => {
-          attraction.likes++; // Increment the likes when the button is clicked
-          updateLikesCount(card, attraction.likes);
-          updateAttractionLikes(attraction.id, { likes: attraction.likes }); // Update likes on the server
-          saveAttractions(attractions); // Save updated data to localStorage
-        });
-        card.appendChild(likeButton);
+        attraction.likes++; // Increment the likes when the button is clicked
+            updateLikesCount(card, attraction.likes);
+            updateAttractionLikes(attraction.id, { likes: attraction.likes }); // Update likes on the server
+            saveAttractions(attractions); // Save updated data to localStorage
+      });
+      card.appendChild(likeButton);
   
         // Create and append Likes count
         const likesCount = document.createElement("span");
@@ -118,6 +116,18 @@ document.addEventListener("DOMContentLoaded", () => {
         inquiryInput.setAttribute("placeholder", "Ask a question...");
         inquirySection.appendChild(inquiryInput);
   
+        const askButton = document.createElement("button");
+        askButton.textContent = "Ask";
+        askButton.addEventListener("click", () => {
+          const inquiryText = inquiryInput.value.trim();
+          if (inquiryText !== "") {
+            attraction.inquiries.push(inquiryText);
+            updateInquiryList(inquiryList, inquiryText);
+            inquiryInput.value = "";
+          }
+        });
+        inquirySection.appendChild(askButton);
+  
         // Append Inquiry and Review sections to card
         card.appendChild(inquirySection);
         card.appendChild(reviewSection);
@@ -125,20 +135,36 @@ document.addEventListener("DOMContentLoaded", () => {
         // Append card to the attraction gallery
         attractionGallery.appendChild(card);
       });
-    }
-  
-    // Function to update the likes on the server using PATCH request
+      
+     // Function to update the likes on the server using PATCH request
     function updateAttractionLikes(attractionId, likes) {
-      fetch(`https://tourify-web-app.onrender.com/attractions/${attractionId}`, {
+        fetch(`https://tourify-web-app.onrender.com/attractions/${attractionId}`, {
         method: "PATCH",
         headers: {
-          "Content-Type": "application/json",
+            "Content-Type": "application/json",
         },
         body: JSON.stringify(likes),
-      });
+    });
+    }
+        // Function to save attractions data to localStorage
+    function saveAttractions(attractions) {
+        localStorage.setItem("attractions", JSON.stringify(attractions));
+    }
     }
   
-    // ... (Other functions)
+    // Function to update the review list
+    function updateReviewList(reviewList, newReview) {
+      const listItem = document.createElement("li");
+      listItem.textContent = newReview;
+      reviewList.appendChild(listItem);
+    }
+  
+    // Function to update the inquiry list
+    function updateInquiryList(inquiryList, newInquiry) {
+      const listItem = document.createElement("li");
+      listItem.textContent = newInquiry;
+      inquiryList.appendChild(listItem);
+    }
   
     // Function to update the number of likes displayed
     function updateLikesCount(card, likes) {
@@ -146,4 +172,3 @@ document.addEventListener("DOMContentLoaded", () => {
       likesCount.textContent = likes + " Likes";
     }
   });
-  
