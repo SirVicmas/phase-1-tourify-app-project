@@ -1,0 +1,59 @@
+{
+    "attractions": [
+      {
+        "id": 1,
+        "name": "Maasai Mara National Park",
+        "image": "https://images.pexels.com/photos/16168264/pexels-photo-16168264/free-photo-of-wildebeest-migration.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description": "Maasai Mara National Park, located in southwestern Kenya, is a renowned wildlife reserve with stunning landscapes and abundant biodiversity. Named after the Maasai people, the park offers an unforgettable safari experience, home to the 'Big Five' and hosting the famous Great Migration of wildebeests and zebras. Discover the breathtaking beauty of this iconic park and immerse yourself in Kenya's rich wildlife heritage. Join us on an extraordinary journey through the heart of the wild at Maasai Mara National Park.",
+        "likes":0,
+        "reviews":[]
+        
+      },
+      {
+        "id": "2",
+        "name": "Tsavo National Park",
+        "image": "https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description": "Tsavo National Park, one of Kenya's largest and oldest parks, beckons with its vast wilderness and untamed beauty. Located in southeastern Kenya, it is divided into Tsavo East and Tsavo West, both offering unique and diverse landscapes. Home to a wide variety of wildlife, including the 'Big Five' and numerous bird species, Tsavo is a paradise for nature enthusiasts and wildlife photographers alike. Explore the rugged terrains, marvel at the iconic red elephants, and witness the magic of the African savanna at Tsavo National Park. Embark on an unforgettable journey through the wilderness and immerse yourself in the raw splendor of this captivating sanctuary.",
+        "likes":0
+      },
+      {
+        "id": "3",
+        "name": "Nairobi National park",
+        "image": "https://images.pexels.com/photos/3992430/pexels-photo-3992430.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description": "Nairobi National Park, a unique wilderness gem, lies at the doorstep of Kenya's bustling capital city. It is the only national park in the world located within a major urban area. Despite its proximity to Nairobi, the park showcases an astonishing array of wildlife, making it a remarkable conservation success story. Visitors can spot majestic lions, graceful giraffes, and a host of other animals roaming freely against the backdrop of the city skyline. Nairobi National Park offers a rare opportunity to experience the thrill of an African safari without leaving the city's boundaries. Embark on an extraordinary journey through this urban wildlife sanctuary and witness the coexistence of nature and city life in perfect harmony.",
+        "likes":0,
+        "reviews":[]
+      },
+      {
+        "id": "4",
+        "name": "Hell's Gate National Park",
+        "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/6c/07/22.jpg",
+        "description": "Hell's Gate National Park, located near Lake Naivasha, offers a unique adventure in a geothermal wonderland. Famous for its dramatic cliffs, gorges, and hot springs, the park provides an exceptional opportunity for hiking, rock climbing, and cycling amidst stunning landscapes. Wildlife enthusiasts can spot gazelles, baboons, and eagles while relishing the breathtaking views of the park's geothermal features.",
+        "likes":0,
+        "reviews":[]
+      },
+      {
+        "id": "5",
+        "name": "Diani Beach",
+        "image": "https://images.pexels.com/photos/17494949/pexels-photo-17494949/free-photo-of-beach-by-the-sea.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "likes":0,
+        "reviews":[]
+      },
+      {
+        "id": "6",
+        "name": "Mount Kenya National Park",
+        "image": "https://images.pexels.com/photos/12853346/pexels-photo-12853346.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description": "Mount Kenya National Park, a UNESCO World Heritage Site, is a majestic mountain range dominating Kenya's skyline. The park features diverse ecosystems, from dense forests to alpine moorlands and glaciers. As the second-highest peak in Africa, Mount Kenya offers a challenging climb for experienced trekkers and an opportunity to witness breathtaking views of the surrounding landscapes. Nature lovers can encounter rare and endemic species of plants and wildlife while exploring the mountain's enchanting trails.",
+        "likes":0,
+        "reviews":[]
+      },
+      {
+        "id": "7",
+        "name": "Lake Nakuru National Park",
+        "image": "https://www.jewelsafaris.com/wp-content/uploads/2021/06/lake-nakuru-flamingos.jpg",
+        "description": "Lake Nakuru National Park, located in the Great Rift Valley, is famed for its vast soda lake that attracts a myriad of flamingos, turning its shores into a pink-hued spectacle. The park is a sanctuary for both rhinos and Rothschild giraffes, providing an unforgettable wildlife experience. Visitors can enjoy game drives, birdwatching, and breathtaking vistas of the picturesque lake against the backdrop of the Menengai Crater and surrounding hills.",
+        "likes":0,
+        "reviews":[]
+      }
+    ]
+}

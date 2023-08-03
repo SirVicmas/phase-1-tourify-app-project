@@ -1,0 +1,243 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Light gray background */
+    color: #333; /* Dark gray text */
+    
+    
+}
+
+/* Header styles */
+header {
+    background-color: #1f2c3a; 
+    color: #fff; /* White text */
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+      /* Add the transition properties */
+    transition-property: color, font-size;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+  
+  header h1 {
+    margin: 0;
+}
+
+header a:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+/* Navigation bar styles */
+.navbar {
+  background-color: #1f2c3a;
+  padding: 15px 0;
+  border-bottom: 1px solid #2c3e50;
+}
+
+.navbar-brand {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+.navbar-nav {
+  margin-top: 10px;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  font-size: 18px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Attraction card styles */
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #272323; /* White card background */
+    box-shadow: 0 2px 5px rgba(94, 93, 93, 0.1); /* Slight shadow for depth */
+    transition: box-shadow 0.3s ease; /* Smooth box-shadow transition */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+  
+  .card h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #db9a9a;
+ }
+  
+  .card p {
+    margin-top: 5px;
+    color: #ccc;
+}
+
+.card button {
+    background-color: #193261;
+    color: rgb(250, 246, 241);
+    max-width: 15%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.card button:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Like button styles */
+.like-button {
+    display: inline-block;
+    margin-right: 5px;
+}
+  
+  /* Like count styles */
+.like-count {
+  display: inline-block;
+  color: #fff; /* White text color */
+  font-weight: bold;
+  background-color: #007bff; /* Blue background color */
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-left: 10px; /* Add some space between the like button and count */
+}
+
+/* Style for review section */
+.review-section {
+    margin-top: 20px;
+    color: #fff;
+} 
+
+.review-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #db9a9a;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+}
+
+/* Add review button styles */
+.add-review-button {
+    background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+ }
+
+.add-review-button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for inquiry section */
+.inquiry-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #332f2f; /* Light gray background */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.inquiry-section h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #db9a9a;
+}
+
+.inquiry-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #ccc;
+}
+
+.inquiry-list-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  color: #fff;
+  
+}
+
+.inquiry-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #f1f6fa;
+}
+
+.inquiry-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inquiry-button:hover {
+  background-color: #0056b3;
+
+/* Scroll to top button styles */
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 99;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+#scroll-to-top:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
